@@ -1,5 +1,6 @@
-package tech.aparimit.touchgrass.components.welcome
+package tech.aparimit.touchgrass.screens.welcome
 
+import android.content.Intent
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -16,23 +17,26 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import tech.aparimit.touchgrass.AuthenticationActivity
 import tech.aparimit.touchgrass.R
-import tech.aparimit.touchgrass.components.WelcomeScreen1
-import tech.aparimit.touchgrass.components.WelcomeScreen2
 import tech.aparimit.touchgrass.ui.theme.brown
+import tech.aparimit.touchgrass.ui.theme.darkGreen
 import tech.aparimit.touchgrass.ui.theme.dmSansFontFamily
 import tech.aparimit.touchgrass.ui.theme.lightGreen
-import tech.aparimit.touchgrass.ui.theme.offText
+import tech.aparimit.touchgrass.ui.theme.paleWhite
 import tech.aparimit.touchgrass.ui.theme.paleGreen
 import tech.aparimit.touchgrass.ui.theme.sunshineYellow
 
 @Composable
 fun WelcomeScreen3(navController: NavController){
+    val context = LocalContext.current
     Box(
         modifier = Modifier
             .fillMaxSize()
@@ -43,22 +47,22 @@ fun WelcomeScreen3(navController: NavController){
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(lightGreen)
+                .background(darkGreen)
                 .padding(12.dp)
         ) {
             Text(
-                text = "Upload a daily photo to keep your streak alive!",
+                text = stringResource(R.string.str_welcome_screen_3_title),
                 fontSize = 48.sp,
                 fontFamily = dmSansFontFamily,
                 fontWeight = FontWeight.Medium,
-                color = offText,
+                color = paleWhite,
             )
             Image(
                 modifier = Modifier
                     .padding(0.dp, 8.dp, 0.dp, 0.dp)
                     .fillMaxWidth(),
                 painter = painterResource(R.drawable.welcome_screen_3),
-                contentDescription = ""
+                contentDescription = stringResource(R.string.str_welcome_screen_3_image_cd),
             )
         }
         Button(
@@ -66,18 +70,22 @@ fun WelcomeScreen3(navController: NavController){
                 .padding(12.dp)
                 .align(Alignment.BottomEnd),
             onClick = {
-                navController.navigate(WelcomeScreen1)
+                Intent(context, AuthenticationActivity::class.java).apply {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                }.also {
+                    context.startActivity(it)
+                }
             },
             colors = ButtonColors(
                 containerColor = brown,
-                contentColor = Color.White,
-                disabledContainerColor = sunshineYellow,
-                disabledContentColor = sunshineYellow
+                contentColor = paleWhite,
+                disabledContainerColor = brown,
+                disabledContentColor = brown
             )
         ) {
             Text(
                 modifier = Modifier.padding(16.dp, 8.dp),
-                text = "Continue (3/3)",
+                text = stringResource(R.string.str_welcome_screen_3_btn_text),
                 fontSize = 14.sp,
                 fontFamily = dmSansFontFamily,
                 fontWeight = FontWeight.SemiBold

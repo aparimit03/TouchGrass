@@ -19,10 +19,10 @@ val skyBlue = Color(0xFF03A9F4)
 val sunsetOrange = Color(0xFFFF5722)
 
 // UI Elements
-val offWhite = Color(0xFFF5F5F5)
+val offWhite = Color(0xFFEBEBE6)
 val darkGray = Color(0xFF424242)
 val lightText = Color(0xFFFFFFFF)
-val offText = Color(0xFFFAFAF9)
+val paleWhite = Color(0xFFFAFAF9)
 val errorRed = Color(0xFFD32F2F)
 
 // Achievement Badges

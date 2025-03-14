@@ -1,4 +1,4 @@
-package tech.aparimit.touchgrass.components.welcome
+package tech.aparimit.touchgrass.screens.welcome
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -17,19 +17,23 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import tech.aparimit.touchgrass.R
+import tech.aparimit.touchgrass.WelcomeActivity
 import tech.aparimit.touchgrass.ui.theme.brown
 import tech.aparimit.touchgrass.ui.theme.dmSansFontFamily
 import tech.aparimit.touchgrass.ui.theme.lightGreen
-import tech.aparimit.touchgrass.ui.theme.offText
+import tech.aparimit.touchgrass.ui.theme.paleWhite
 import tech.aparimit.touchgrass.ui.theme.paleGreen
 import tech.aparimit.touchgrass.ui.theme.sunshineYellow
 import tech.aparimit.touchgrass.components.*
+import tech.aparimit.touchgrass.ui.theme.darkGreen
+import tech.aparimit.touchgrass.ui.theme.sand
 
 @Composable
 fun WelcomeScreen1(navController: NavHostController) {
@@ -43,22 +47,22 @@ fun WelcomeScreen1(navController: NavHostController) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(lightGreen)
+                .background(darkGreen)
                 .padding(12.dp)
         ) {
             Text(
-                text = "Step outside, Touch grass, and\nBuild Streaks!",
+                text = stringResource(R.string.str_welcome_screen_1_title),
                 fontSize = 48.sp,
                 fontFamily = dmSansFontFamily,
                 fontWeight = FontWeight.Medium,
-                color = offText,
+                color = paleWhite,
             )
             Image(
                 modifier = Modifier
                     .padding(0.dp, 8.dp, 0.dp, 0.dp)
                     .fillMaxWidth(),
                 painter = painterResource(R.drawable.welcome_screen_1),
-                contentDescription = ""
+                contentDescription = stringResource(R.string.str_welcome_screen_1_image_cd),
             )
         }
         Button(
@@ -70,14 +74,14 @@ fun WelcomeScreen1(navController: NavHostController) {
             },
             colors = ButtonColors(
                 containerColor = brown,
-                contentColor = Color.White,
-                disabledContainerColor = sunshineYellow,
-                disabledContentColor = sunshineYellow
+                contentColor = paleWhite,
+                disabledContainerColor = brown,
+                disabledContentColor = brown
             )
         ) {
             Text(
                 modifier = Modifier.padding(16.dp, 8.dp),
-                text = "Continue (1/3)",
+                text = stringResource(R.string.str_welcome_screen_1_btn_text),
                 fontSize = 14.sp,
                 fontFamily = dmSansFontFamily,
                 fontWeight = FontWeight.SemiBold
