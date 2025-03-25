@@ -32,6 +32,7 @@ import tech.aparimit.touchgrass.ui.theme.dmSansFontFamily
 import tech.aparimit.touchgrass.ui.theme.lightGreen
 import tech.aparimit.touchgrass.ui.theme.paleWhite
 import tech.aparimit.touchgrass.ui.theme.paleGreen
+import tech.aparimit.touchgrass.ui.theme.seaGreen
 import tech.aparimit.touchgrass.ui.theme.sunshineYellow
 
 @Composable
@@ -47,7 +48,7 @@ fun WelcomeScreen3(navController: NavController){
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(darkGreen)
+                .background(seaGreen)
                 .padding(12.dp)
         ) {
             Text(

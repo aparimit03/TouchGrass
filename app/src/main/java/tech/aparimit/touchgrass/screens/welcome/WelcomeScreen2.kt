@@ -31,6 +31,7 @@ import tech.aparimit.touchgrass.ui.theme.sunshineYellow
 import tech.aparimit.touchgrass.components.*
 import tech.aparimit.touchgrass.ui.theme.darkGreen
 import tech.aparimit.touchgrass.ui.theme.paleWhite
+import tech.aparimit.touchgrass.ui.theme.seaGreen
 
 @Composable
 fun WelcomeScreen2(navController: NavHostController) {
@@ -44,7 +45,7 @@ fun WelcomeScreen2(navController: NavHostController) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
-                .background(darkGreen)
+                .background(seaGreen)
                 .padding(12.dp)
         ) {
             Text(

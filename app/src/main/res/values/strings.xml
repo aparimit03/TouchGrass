@@ -12,4 +12,5 @@
     <string name="str_welcome_screen_3_title">Upload a daily photo to keep your streak alive!</string>
     <string name="str_welcome_screen_3_image_cd">Upload Image</string>
     <string name="str_welcome_screen_3_btn_text">Continue (3/3)</string>
+    <string name="title_activity_home">HomeActivity</string>
 </resources>

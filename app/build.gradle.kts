@@ -76,4 +76,10 @@ dependencies {
 
     // JSON serialization library, works with the Kotlin serialization plugin
     implementation(libs.kotlinx.serialization.json)
+
+    // Supabase libraries
+    implementation(libs.auth.kt)
+
+    // Ktor libraries
+    implementation(libs.ktor.client.okhttp)
 }
