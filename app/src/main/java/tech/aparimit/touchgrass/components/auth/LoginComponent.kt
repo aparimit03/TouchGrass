@@ -36,10 +36,9 @@ import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.core.content.ContextCompat.startActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
-import tech.aparimit.touchgrass.HomeActivity
+import tech.aparimit.touchgrass.MainActivity
 import tech.aparimit.touchgrass.R
 import tech.aparimit.touchgrass.loginWithEmailAndPassword
 import tech.aparimit.touchgrass.ui.theme.dmSansFontFamily
@@ -248,7 +247,7 @@ fun LoginComponent() {
                 (context as? ComponentActivity)?.lifecycleScope?.launch {
                     loginWithEmailAndPassword(email, password)
                 }?.invokeOnCompletion {
-                    context.startActivity(Intent(context, HomeActivity::class.java))
+                    context.startActivity(Intent(context, MainActivity::class.java))
                 }
             }
         },

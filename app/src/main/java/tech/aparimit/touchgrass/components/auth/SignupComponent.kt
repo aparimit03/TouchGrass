@@ -1,6 +1,5 @@
 package tech.aparimit.touchgrass.components.auth
 
-import android.content.Intent
 import android.widget.Toast
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.background
@@ -38,9 +37,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
-import tech.aparimit.touchgrass.HomeActivity
 import tech.aparimit.touchgrass.R
-import tech.aparimit.touchgrass.loginWithEmailAndPassword
 import tech.aparimit.touchgrass.signupWithEmailAndPassword
 import tech.aparimit.touchgrass.ui.theme.dmSansFontFamily
 import tech.aparimit.touchgrass.ui.theme.paleGreen

@@ -15,7 +15,6 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -25,11 +24,7 @@ import androidx.navigation.NavHostController
 import tech.aparimit.touchgrass.R
 import tech.aparimit.touchgrass.ui.theme.brown
 import tech.aparimit.touchgrass.ui.theme.dmSansFontFamily
-import tech.aparimit.touchgrass.ui.theme.lightGreen
 import tech.aparimit.touchgrass.ui.theme.paleGreen
-import tech.aparimit.touchgrass.ui.theme.sunshineYellow
-import tech.aparimit.touchgrass.components.*
-import tech.aparimit.touchgrass.ui.theme.darkGreen
 import tech.aparimit.touchgrass.ui.theme.paleWhite
 import tech.aparimit.touchgrass.ui.theme.seaGreen
 
@@ -68,7 +63,7 @@ fun WelcomeScreen2(navController: NavHostController) {
                 .padding(12.dp)
                 .align(Alignment.BottomEnd),
             onClick = {
-                navController.navigate(WelcomeScreen3)
+                navController.navigate(tech.aparimit.touchgrass.WelcomeScreen3)
             },
             colors = ButtonColors(
                 containerColor = brown,

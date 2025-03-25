@@ -7,7 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import tech.aparimit.touchgrass.components.*
 import tech.aparimit.touchgrass.screens.welcome.WelcomeScreen1
 import tech.aparimit.touchgrass.screens.welcome.WelcomeScreen2
 import tech.aparimit.touchgrass.screens.welcome.WelcomeScreen3

@@ -1,4 +1,4 @@
-package tech.aparimit.touchgrass.components
+package tech.aparimit.touchgrass
 
 import kotlinx.serialization.Serializable
 
