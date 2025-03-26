@@ -22,6 +22,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 import tech.aparimit.touchgrass.R
+import tech.aparimit.touchgrass.WelcomeScreen2
 import tech.aparimit.touchgrass.ui.theme.brown
 import tech.aparimit.touchgrass.ui.theme.dmSansFontFamily
 import tech.aparimit.touchgrass.ui.theme.paleWhite
@@ -63,7 +64,7 @@ fun WelcomeScreen1(navController: NavHostController) {
                 .padding(12.dp)
                 .align(Alignment.BottomEnd),
             onClick = {
-                navController.navigate(tech.aparimit.touchgrass.WelcomeScreen2)
+                navController.navigate(WelcomeScreen2)
             },
             colors = ButtonColors(
                 containerColor = brown,
